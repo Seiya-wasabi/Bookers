@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'books/create'
+  get 'books/update'
+  get 'books/destroy'
   get 'homes/index'
   get 'homes/show'
   get 'homes/new'
