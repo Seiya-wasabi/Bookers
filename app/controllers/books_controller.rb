@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   def create
     book = Book.new(book_params)
     book.save
-    redirect_to"/homes/show"
+    redirect_to "/homes/#{book.id}"
   end
 
   def update
