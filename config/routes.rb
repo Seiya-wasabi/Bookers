@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 get "/" => "homes#top"
-get "/homes/index" => "homes#index"
+get "/homes" => "homes#index"
 post "homes" => "books#create"
 get "/homes/show" => "homes#show"
 get "/homes/edit" => "homes#edit"
+get "/homes/:id" => "homes#show"
 
 # resources :homes
 resources :books
