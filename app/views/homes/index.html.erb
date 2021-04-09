@@ -8,26 +8,55 @@
 </head>
 <body>
   <h1 class ="title-head">Books</h1>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
   <!--booksの一覧表示-->
   <div class ="container">
     <div class ="list1">
-<tr><strong>Title</strong></tr>
-  
 <% @books.each do |b| %>
 <div class ="box">
-  <%= link_to b.title,"/homes/#{b.id}" %>
+  <%= b.title %>
 </div>
   
 <% end %>
     </div>
     <div class ="list2">
-<tr><strong>Body</strong></tr>
 <% @books.each do |b| %>
 <div class ="box">
-  <%= link_to b.body,"/homes/#{b.id}" %>
+  <%= b.body %>
 </div>
 <% end %>
     </div>
+    
+<div class ="list3">
+<% @books.each do |b| %>
+<div class ="box">
+  <%= link_to "show","/homes/#{b.id}" %>
+</div>
+<% end %>
+</div>
+    
+<div class ="list4">
+<% @books.each do |b| %>
+<div class ="box">
+  <%= link_to "Edit","/homes/edit/#{b.id}" %>
+</div>
+<% end %>
+</div>
+    
+<div class ="list5">
+<% @books.each do |b| %>
+<div class ="box">
+  <%= link_to "Destroy","/homes/edit/#{b.id}" %>
+</div>
+<% end %>
+</div>
+    
   </div>
 
   <h2>New book</h2>
