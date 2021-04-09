@@ -11,15 +11,21 @@
   <!--booksの一覧表示-->
   <div class ="container">
     <div class ="list1">
-<p><strong>Title</strong></p>
+<tr><strong>Title</strong></tr>
+  
 <% @books.each do |b| %>
-  <span><%= link_to b.title,"/homes/#{b.id}" %></span>
+<div class ="box">
+  <%= link_to b.title,"/homes/#{b.id}" %>
+</div>
+  
 <% end %>
     </div>
     <div class ="list2">
-<p><strong>Body</strong></p>
+<tr><strong>Body</strong></tr>
 <% @books.each do |b| %>
-  <span><%= link_to b.body,"/homes/#{b.id}" %></span>
+<div class ="box">
+  <%= link_to b.body,"/homes/#{b.id}" %>
+</div>
 <% end %>
     </div>
   </div>
