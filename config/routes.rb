@@ -5,6 +5,7 @@ post "homes" => "books#create"
 # get "/homes/show" => "homes#show"
 get "/homes/edit" => "homes#edit"
 get "homes/:id" => "homes#show"
+get "todolists/:id/edit" => "todolists#edit", as: "edit_todolist"
 
 # resources :homes
 # resources :books
