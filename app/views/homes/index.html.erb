@@ -52,7 +52,7 @@
 <div class ="list5">
 <% @books.each do |b| %>
 <div class ="box">
-  <%= link_to "Destroy","/homes/edit/#{b.id}" %>
+  <%= link_to "Destroy", "/homes/#{@book.id}/destroy", {method:"post"}, "data-confirm" => "Are you sure？" %>
 </div>
 <% end %>
 </div>

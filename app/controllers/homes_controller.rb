@@ -8,7 +8,7 @@ class HomesController < ApplicationController
   end
 
   def show
-    @book = Book.find(params[:id])
+    @book =Book.find(params[:id])
   end
 
   def new
@@ -16,6 +16,6 @@ class HomesController < ApplicationController
   end
 
   def edit
-    @book = Book.find(params[:id])
+    @book = Book.find_by(id: params[:id])
   end
 end
