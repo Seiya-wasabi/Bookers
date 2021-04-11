@@ -52,7 +52,7 @@
 <div class ="list5">
 <% @books.each do |b| %>
 <div class ="box">
-  <%= link_to "Destroy", homes_path(@book), method: :delete %>
+  <%= link_to "Destroy",destroy_book_path(b), method: :delete %>
 <% end %>
 </div>
 </div>
