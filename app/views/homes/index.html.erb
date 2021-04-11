@@ -70,8 +70,10 @@
     <tr>
       <td><%= b.title %></td>
       <td><%= b.body %></td>
+      <td><%= link_to "Show", home_path(b) %></td>
+      <ttd><%= link_to "Edit", edit_home(b) %></td>
     </tr>
-    <% end%>
+    <% end %>
   </tbody>
 </table>
 
