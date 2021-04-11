@@ -1,8 +1,11 @@
 class BooksController < ApplicationController
   def create
     book = Book.new(book_params)
-    book.save
+    if book.save
     redirect_to "/homes/#{book.id}"
+    else
+      render "new"
+    end
 
     flash[:true] = "Book was successfully created."
   end
