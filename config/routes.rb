@@ -6,7 +6,7 @@ post "homes" => "books#create"
 get "/homes/edit" => "homes#edit"
 get "homes/:id" => "homes#show"
 get "homes/edit/:id" => "homes#edit", as: "edit_home"
-post "/homes/:id/update" => "books#update", as: "update_book"
+patch "/homes/:id" => "books#update", as: "update_book"
 delete "homes/:id/destroy" => "books#destroy", as: "destroy_book"
 delete "/homes" => "books#destroy"
 

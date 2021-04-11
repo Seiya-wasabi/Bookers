@@ -8,11 +8,11 @@ class BooksController < ApplicationController
   def update
     book = Book.find(params[:id])
     book.update(book_params)
-    redirect_to book_path(book:id)
-  end
+    redirect_to homes_path(book.id)
+    end
 
   def destroy
-    @book = Book.find_by(params[:id])
+    @book = Book.find(params[:id])
     @book.destroy
     redirect_to homes_path
   end
