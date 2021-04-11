@@ -3,14 +3,16 @@ class BooksController < ApplicationController
     book = Book.new(book_params)
     book.save
     redirect_to "/homes/#{book.id}"
-    
+
     flash[:true] = "Book was successfully created."
   end
 
   def update
     book = Book.find(params[:id])
     book.update(book_params)
-    redirect_to homes_path(book.id)
+    redirect_to update_book_path(book.id)
+    
+    flash[:true1] ="Book was successfully updated."
     end
 
   def destroy

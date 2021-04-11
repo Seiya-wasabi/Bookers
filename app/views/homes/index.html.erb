@@ -71,7 +71,8 @@
       <td><%= b.title %></td>
       <td><%= b.body %></td>
       <td><%= link_to "Show", home_path(b) %></td>
-      <ttd><%= link_to "Edit", edit_home(b) %></td>
+      <td><%= link_to "Edit", edit_home_path(b) %></td>
+      <td><%= link_to "Destroy", destroy_book_path(b), method: :delete %></td>
     </tr>
     <% end %>
   </tbody>
