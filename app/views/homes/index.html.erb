@@ -22,7 +22,7 @@
 <div class ="box">
   <%= b.title %>
 </div>
-  
+
 <% end %>
     </div>
     <div class ="list2">
@@ -32,7 +32,7 @@
 </div>
 <% end %>
     </div>
-    
+
 <div class ="list3">
 <% @books.each do |b| %>
 <div class ="box">
@@ -40,7 +40,7 @@
 </div>
 <% end %>
 </div>
-    
+
 <div class ="list4">
 <% @books.each do |b| %>
 <div class ="box">
@@ -48,17 +48,16 @@
 </div>
 <% end %>
 </div>
-    
+
 <div class ="list5">
 <% @books.each do |b| %>
 <div class ="box">
-  <%= link_to "Destroy", "/homes/#{@book.id}/destroy", {method:"post"}, "data-confirm" => "Are you sure？" %>
-</div>
+  <%= link_to "Destroy", homes_path(@book), method: :delete %>
 <% end %>
 </div>
-    
-  </div>
+</div>
 
+<div class ="new">
   <h2>New book</h2>
   <%= form_with model: @book, url:'/homes',local:true do |f| %>
   <div class = "form">
@@ -71,5 +70,6 @@
   </div>
   <%= f.submit 'Create Book' %>
   <% end %>
+</div>
 </body>
 </html>

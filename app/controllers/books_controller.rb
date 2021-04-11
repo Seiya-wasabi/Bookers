@@ -12,9 +12,9 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @book = Book.find_by(id: params[:id])
+    @book = Book.find_by(params[:id])
     @book.destroy
-    redirect_to("/homes/index")
+    redirect_to homes_path
   end
 
   private
