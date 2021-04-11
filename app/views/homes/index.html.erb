@@ -8,54 +8,72 @@
 </head>
 <body>
   <h1 class ="title-head">Books</h1>
-  <thead>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
+  <!--<thead>-->
+  <!--<tr>-->
+  <!--  <th>Title</th>-->
+  <!--  <th>Body</th>-->
+  <!--  <th colspan="3"></th>-->
+  <!--</tr>-->
+  <!--</thead>-->
   <!--booksの一覧表示-->
-  <div class ="container">
-    <div class ="list1">
-<% @books.each do |b| %>
-<div class ="box">
-  <%= b.title %>
-</div>
+<!--  <div class ="container">-->
+<!--    <div class ="list1">-->
+<!--<% @books.each do |b| %>-->
+<!--<div class ="box">-->
+<!--  <%= b.title %>-->
+<!--</div>-->
 
-<% end %>
-    </div>
-    <div class ="list2">
-<% @books.each do |b| %>
-<div class ="box">
-  <%= b.body %>
-</div>
-<% end %>
-    </div>
+<!--<% end %>-->
+<!--    </div>-->
+<!--    <div class ="list2">-->
+<!--<% @books.each do |b| %>-->
+<!--<div class ="box">-->
+<!--  <%= b.body %>-->
+<!--</div>-->
+<!--<% end %>-->
+<!--    </div>-->
 
-<div class ="list3">
-<% @books.each do |b| %>
-<div class ="box">
-  <%= link_to "show","/homes/#{b.id}" %>
-</div>
-<% end %>
-</div>
+<!--<div class ="list3">-->
+<!--<% @books.each do |b| %>-->
+<!--<div class ="box">-->
+<!--  <%= link_to "show","/homes/#{b.id}" %>-->
+<!--</div>-->
+<!--<% end %>-->
+<!--</div>-->
 
-<div class ="list4">
-<% @books.each do |b| %>
-<div class ="box">
-  <%= link_to "Edit","/homes/edit/#{b.id}" %>
-</div>
-<% end %>
-</div>
+<!--<div class ="list4">-->
+<!--<% @books.each do |b| %>-->
+<!--<div class ="box">-->
+<!--  <%= link_to "Edit","/homes/edit/#{b.id}" %>-->
+<!--</div>-->
+<!--<% end %>-->
+<!--</div>-->
 
-<div class ="list5">
-<% @books.each do |b| %>
-<div class ="box">
-  <%= link_to "Destroy",destroy_book_path(b), method: :delete %>
-<% end %>
-</div>
-</div>
+<!--<div class ="list5">-->
+<!--<% @books.each do |b| %>-->
+<!--<div class ="box">-->
+<!--  <%= link_to "Destroy",destroy_book_path(b), method: :delete %>-->
+<!--<% end %>-->
+<!--</div>-->
+<!--</div>-->
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <!-----------ここまでタイトルの横軸------------>
+  <tbody>
+    <% @books.each do |b| %>
+    <tr>
+      <td><%= b.title %></td>
+      <td><%= b.body %></td>
+    </tr>
+    <% end%>
+  </tbody>
+</table>
 
 <div class ="new">
   <h2>New book</h2>
