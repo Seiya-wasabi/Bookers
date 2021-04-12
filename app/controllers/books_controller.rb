@@ -3,12 +3,13 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     if @book.save
      redirect_to "/homes/:id"
-     else
+      flash[:true] = "Book was successfully created."
+    else
      @books = Book.all
        render template: 'homes/index'
     end
 
-    flash[:true] = "Book was successfully created."
+    # flash[:true] = "Book was successfully created."
   end
 
   def update
