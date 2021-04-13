@@ -2,11 +2,11 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-     redirect_to home_path(@book.id)
-      flash[:true] = "Book was successfully created."
-    else
-     @books = Book.all
-       render template: 'homes/index'
+    redirect_to home_path(@book.id)
+    #   flash[:true] = "Book was successfully created."
+    # else
+    # @books = Book.all
+    #   render template: 'homes/index'
     end
 
     # flash[:true] = "Book was successfully created."
